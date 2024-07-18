@@ -6,6 +6,7 @@ from pathlib import Path
 from src.entity.config_entity import DataIngestionConfig
 from src import logger
 from src.utils import get_size
+from src.config.gcloud_syncer import GCloudSync
 
 
 class DataIngestion:
@@ -16,11 +17,14 @@ class DataIngestion:
         logger.info("Trying to download file...")
         if not os.path.exists(self.config.local_data_file):
             logger.info("Download started...")
-            filename, headers = request.urlretrieve(
-                url=self.config.source_URL,
-                filename=self.config.local_data_file
-            )
-            logger.info(f"{filename} download! with following info: \n{headers}")
+            obj=GCloudSync()
+            obj.sync_folder_from_gcloud("masked_data", "data.zip", "artifacts\data_ingestion")
+            logger.info("Data ingested from Google Cloud")
+            # filename, headers = request.urlretrieve(
+            #     url=self.config.source_URL,
+            #     filename=self.config.local_data_file
+            # )
+            # logger.info(f"{filename} download! with following info: \n{headers}")
         else:
             logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")        
 
