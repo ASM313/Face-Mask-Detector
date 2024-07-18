@@ -7,7 +7,7 @@ class Mask:
     def __init__(self,filename):
         self.filename =filename
 
-    def predictiondogcat(self):
+    def prediction(self):
         # load model
         model = load_model(os.path.join("artifacts","training", "model.h5"))
 
