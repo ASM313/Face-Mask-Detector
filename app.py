@@ -27,16 +27,15 @@ def home():
 @cross_origin()
 def trainRoute():
     os.system("python main.py")
-    return "Training done successfully!"
-
-
+    msg= "Training done successfully!"
+    return render_template('index.html', msg=msg)
 
 @app.route("/predict", methods=['POST'])
 @cross_origin()
 def predictRoute():
     image = request.json['image']
     decodeImage(image, clApp.filename)
-    result = clApp.classifier.predictiondogcat()
+    result = clApp.classifier.prediction()
     return jsonify(result)
 
 
