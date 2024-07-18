@@ -73,7 +73,7 @@ class ConfigurationManager:
         training = self.config.training
         prepare_base_model = self.config.prepare_base_model
         params = self.params
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "data")
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "mask_data/data")
         create_directories([
             Path(training.root_dir)
         ])
