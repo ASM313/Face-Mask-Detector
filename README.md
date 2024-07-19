@@ -62,4 +62,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-Special thanks to the iNeuron team and Sudhanshu Kumar, CEO & Chief AI Engineer at iNeuron.ai, for their guidance and support.
+AWS ECR: 211125392420.dkr.ecr.ap-south-1.amazonaws.com/face_mask
