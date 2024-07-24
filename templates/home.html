@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mask Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Face Mask Detection</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="upload-section">
+            <h2>Upload an Image</h2>
+            <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+            <div class="image-preview" id="imagePreview"></div>
+            <div class="buttons">
+                <button id="trainButton">Training</button>
+                <button id="predictButton">Prediction</button>
+            </div>
+            <div class="result" id="result">
+                <h3>Predicted Result:</h3>
+                <p id="resultText">No prediction made yet.</p>
+                <h3>{{msg}}</h3>
+            </div>
+            <div class="spinner" id="spinner"></div> <!-- Spinner -->
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

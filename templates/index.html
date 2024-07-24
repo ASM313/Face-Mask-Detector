@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Face Mask Detector</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Face Mask Detection</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style>
 		body{background-color: #eff2f9;}
 		.iupload h3{color: #1b2d6b;font-size: 30px;font-weight: 700;}
@@ -92,12 +92,11 @@
 <body>
     <div class="main container">
 		<section class="iupload">
-			<h3 class="text-center py-4">Face Mask Detection</h3>
-			<h3> {{msg}} </h3>
+			<h3 class="text-center py-4">Face Mask Detector</h3>
 			<div class="row">
 				<div class="img-part col-md-6">
 					<div class="image-part">
-						<video autoplay id="video" poster="https://img.freepik.com/free-vector/group-young-people-posing-photo_52683-18824.jpg?size=338&ext=jpg"></video>
+						<video autoplay id="video" poster="video.mp4"></video>
 						<img src="" id="photo">
 						<canvas style="display:none;" id="canvas"></canvas>
 					</div>
@@ -122,7 +121,6 @@
 							<input name="upload" type="file" id="fileinput" style="position:absolute;top:-500px;"/><br/>
 						</form>
 					</div>
-					<a href="/train" type="button" class="btn btn-success">Train </a >
 				</div>
 				<div class="col-md-6 col-xs-12 right-part">
 					<h5 class="mb-2"><center>Prediction Results</center></h5>

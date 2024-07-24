@@ -18,7 +18,7 @@ class DataIngestion:
         if not os.path.exists(self.config.local_data_file):
             logger.info("Download started...")
             obj=GCloudSync()
-            obj.sync_folder_from_gcloud("masked_data", "data.zip", "artifacts\data_ingestion")
+            obj.sync_folder_from_gcloud("masked_data", "data.zip", "artifacts/data_ingestion/")
             logger.info("Data ingested from Google Cloud")
             # filename, headers = request.urlretrieve(
             #     url=self.config.source_URL,
