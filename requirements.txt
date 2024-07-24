@@ -14,4 +14,5 @@ scipy
 Flask
 Flask-Cors
 google-cloud-storage
+opencv-python
 -e .
