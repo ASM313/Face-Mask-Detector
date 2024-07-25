@@ -7,7 +7,7 @@ import numpy as np
 apps = Flask(__name__)
 
 # Load the trained model
-model = load_model('artifacts/training/model.h5')
+model = load_model('model.h5')
 
 @apps.route('/')
 def home():
