@@ -42,10 +42,12 @@
 </head>
 <body>
     <h1>Face Mask Detection</h1>
+    <h2>{{msg}}</h2>
     <form id="upload-form">
         <input type="file" id="image-file" accept="image/*" required>
         <button type="submit">Upload and Classify</button>
     </form>
+    <button type="button" class="btn btn-info" href="{{url_for('trainRoute')}}">Start Training</button> 
     <div id="result">
         <h2 id="emotion">{{result}}</h2>
         <p id="thought"></p>
